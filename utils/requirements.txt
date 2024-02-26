@@ -1,0 +1,12 @@
+torch
+numpy
+soundfile
+librosa
+h5py
+scipy
+tqdm
+opencv-python
+ffmpeg
+matplotlib
+torchaudio
+torchvision

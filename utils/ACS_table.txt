@@ -1,0 +1,10 @@
+1:	φ = φ − pi/2, θ = −θ		C1new=C1; 	C2new=-C4; 	C3new=-C3; 	C4new=C2
+2:	φ = −φ − pi/2, θ = θ		C1new=C1; 	C2new=-C4; 	C3new=C3; 	C4new=-C2
+3:	φ = φ, θ = θ			C1new=C1; 	C2new=C2; 	C3new=C3; 	C4new=C4
+4:	φ = −φ, θ = −θ			C1new=C1; 	C2new=-C2; 	C3new=-C3; 	C4new=C4
+5:	φ = φ + pi/2, θ = −θ 		C1new=C1; 	C2new=C4; 	C3new=-C3; 	C4new=-C2
+6:	φ = −φ + pi/2, θ = θ		C1new=C1; 	C2new=C4; 	C3new=C3; 	C4new=C2
+7:	φ = φ + pi, θ = θ		C1new=C1; 	C2new=-C2; 	C3new=C3; 	C4new=-C4
+8:	φ = −φ + pi, θ = −θ		C1new=C1; 	C2new=C2; 	C3new=-C3; 	C4new=-C4
+
+		
