@@ -1,8 +1,8 @@
 # Fusion of Audio and Visual Embeddings for Sound Event Localization and Detection
 
 
-This repository contains the python implementation for the paper "Fusion of Audio and Visual Embeddings for Sound Event Localization and Detection" which will be presented at IEEE ICASSP 2024.
-> D. Berghi, P. Wu, J. Zhao, W. Wang, P. J. B. Jackson. Fusion of Audio and Visual Embeddings for Sound Event Localization and Detection. arXiv preprint arXiv:2312.09034, 2023. URL: https://arxiv.org/abs/2312.09034
+This repository contains the python implementation for the paper "Fusion of Audio and Visual Embeddings for Sound Event Localization and Detection" which has been presented at IEEE ICASSP 2024.
+> D. Berghi, P. Wu, J. Zhao, W. Wang, P. J. B. Jackson. Fusion of Audio and Visual Embeddings for Sound Event Localization and Detection. IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2024.
 
 
 
@@ -125,11 +125,13 @@ The CNN-Conformer employed as an audio encoder was pre-trained on SELD. The weig
 Please consider citing our paper if you find this code useful, many thanks!
 
 ```
-@ARTICLE{Berghi:2024:avseld,
+@INPROCEEDINGS{Berghi:2024:avseld,
   author={Berghi, Davide and Wu, Peipei and Zhao, Jinzheng and Wang, Wenwu and Jackson, Philip J.B.},
-  journal={arXiv preprint arXiv:2312.09034},
+  booktitle={IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)}, 
   title={Fusion of Audio and Visual Embeddings for Sound Event Localization and Detection}, 
-  year={2023}
+  year={2024},
+  pages={8816-8820},
+  doi={10.1109/ICASSP48485.2024.10448050}
 }
 ```
 
