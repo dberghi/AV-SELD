@@ -135,7 +135,7 @@ Please consider citing our paper if you find this code useful, many thanks!
 
 # Acknowledge
 
-This repository adapts and integrate scripts from the original repo provided for the DCASE Task 3 Challenge baseline (audio-only). In particular:
+This repository adapts and integrate scripts from the original repo provided for the DCASE Task 3 Challenge baseline (audio-only) and other repos. In particular:
 
 * The prediction of multi-ACCDOA vectors, the ADPIT loss function, and the implementation of the SELD metrics can be found in: https://github.com/sharathadavanne/seld-dcase2023 
 * The extraction of intensity vectors for the FOA audio format is adapted from Yin Cao's https://github.com/yinkalario/EIN-SELD

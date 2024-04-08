@@ -16,6 +16,10 @@ class AudioVisualConf(nn.Module):
         # visual front-end was precomputed and stored in h5py file
         if conf.training_param['visual_encoder_type'] == 'resnet':
             input_vis_dim = 4096
+            self.conformer_vis = torchaudio.models.Conformer(input_dim=512, num_heads=8, ffn_dim=1024, num_layers=4,
+                                                    depthwise_conv_kernel_size=51, dropout=0.1)
+            self.lengths_vis = torch.from_numpy(
+            np.ones(conf.training_param['batch_size']) * conf.training_param['num_video_frames']).to(device)
         elif conf.training_param['visual_encoder_type'] == 'i3d':
             input_vis_dim = 2048
         self.fc_visual = nn.Linear(input_vis_dim, 512) # reduce dim
@@ -42,6 +46,12 @@ class AudioVisualConf(nn.Module):
     def forward_visual(self, x):
         '''x -> (batch_size, time, embed_dim)'''
         x = self.fc_visual(x)  # (B, T, 512)
+        if conf.training_param['visual_encoder_type'] == 'resnet': # feed to conformer
+            if len(self.lengths_vis) == len(x):
+                lengths = self.lengths_vis
+            else:
+                lengths = self.lengths_vis[:len(x)]
+            x, _ = self.conformer_vis(x, lengths)
         return self.norm_visual(x)
 
     def forward_audio(self, x):
@@ -76,6 +86,10 @@ class AudioVisualCMAF(nn.Module):
         # visual front-end was precomputed and stored in h5py file
         if conf.training_param['visual_encoder_type'] == 'resnet':
             input_vis_dim = 4096
+            self.conformer_vis = torchaudio.models.Conformer(input_dim=512, num_heads=8, ffn_dim=1024, num_layers=4,
+                                                             depthwise_conv_kernel_size=51, dropout=0.1)
+            self.lengths_vis = torch.from_numpy(
+                np.ones(conf.training_param['batch_size']) * conf.training_param['num_video_frames']).to(device)
         elif conf.training_param['visual_encoder_type'] == 'i3d':
             input_vis_dim = 2048
         self.fc_visual = nn.Linear(input_vis_dim, 512) # reduce dim
@@ -105,6 +119,12 @@ class AudioVisualCMAF(nn.Module):
     def forward_visual(self, x):
         '''x -> (batch_size, time, embed_dim)'''
         x = self.fc_visual(x)  # (B, T, 512)
+        if conf.training_param['visual_encoder_type'] == 'resnet': # feed to conformer
+            if len(self.lengths_vis) == len(x):
+                lengths = self.lengths_vis
+            else:
+                lengths = self.lengths_vis[:len(x)]
+            x, _ = self.conformer_vis(x, lengths)
         return self.norm_visual(x)
 
     def forward_audio(self, x):
