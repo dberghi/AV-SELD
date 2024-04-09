@@ -126,8 +126,8 @@ Please consider citing our paper if you find this code useful, many thanks!
 
 ```
 @INPROCEEDINGS{Berghi:2024:avseld,
-  author={Berghi, Davide and Wu, Peipei and Zhao, Jinzheng and Wang, Wenwu and Jackson, Philip J.B.},
-  booktitle={IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)}, 
+  author={Berghi, Davide and Wu, Peipei and Zhao, Jinzheng and Wang, Wenwu and Jackson, Philip J. B.},
+  booktitle={IEEE International Conference on Acoustics, Speech and Signal Processing}, 
   title={Fusion of Audio and Visual Embeddings for Sound Event Localization and Detection}, 
   year={2024},
   pages={8816-8820},
