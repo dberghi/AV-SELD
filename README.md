@@ -3,6 +3,7 @@
 
 This repository contains the python implementation for the paper "Fusion of Audio and Visual Embeddings for Sound Event Localization and Detection" which has been presented at IEEE ICASSP 2024.
 > D. Berghi, P. Wu, J. Zhao, W. Wang, P. J. B. Jackson. Fusion of Audio and Visual Embeddings for Sound Event Localization and Detection. IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2024.
+> [[**arXiv**]]((https://arxiv.org/abs/2312.09034)) [[**IEEE Xplore**]]((https://ieeexplore.ieee.org/abstract/document/10448050))
 
 
 
