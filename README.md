@@ -88,7 +88,7 @@ The code extracts the intensity vectors and visual embeddings for the train and 
 Then it computes the mean and standard deviation vectors that will be used to normalize the audio input features before training (`feature_scaler.h5`).
 
 NOTE: Nearly **500GB of free space is required** to store the extracted features. 
-Create h5py dataset by running:
+Create h5py datasets by running:
  
 	bash scripts/1_preprocessing.sh
 
