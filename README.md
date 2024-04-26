@@ -84,8 +84,9 @@ Optionally, the process can be sped up by parallelizing the transformations. I.e
 
 This step extracts and stores audio and visual features used to train the network.
 The audio encoder takes as input intensity vectors features from the FOA audio signals. We also directly generate and save the visual embeddings by processing the video frames with ResNet50 or I3D (working with pre-extracted visual embeddings, instead of re-generating them every time, remarkably speeds up the training). 
-The code extracts the intensity vectors and visual embeddings for the train and test partitions, and stores them in HDF5 binary format using the h5py module. 
+The code extracts the intensity vectors and visual embeddings for the train and test partitions and stores them in HDF5 binary format using the h5py module. 
 Then it computes the mean and standard deviation vectors that will be used to normalize the audio input features before training (`feature_scaler.h5`).
+~ Note: Nearly **500GB of free space is required** to store the extracted features. ~
 
 Create h5py dataset by running:
  
