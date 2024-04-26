@@ -116,12 +116,12 @@ Set the input arguments of `scripts/3_forward.sh` according to the `[INFO]` of t
 This will replicate a forward pass of the test set (as it is done at the end of each training epoch during training).
 
 
-# Pretrained audio and visual encoders
+## Pretrained audio and visual encoders
 
 The CNN-Conformer employed as an audio encoder was pre-trained on SELD. The weights are stored in `models/weights/audio_weights.pt`. The weights for I3D visual encoder are available in `models/weights/rgb_imagenet.pt` (we do not employ the branch pre-trained on optical flow). The weights for the ResNet50 are available with Torchvision.
 
 
-## Citation
+# Citation
 
 Please consider citing our paper if you find this code useful, many thanks!
 
@@ -136,7 +136,7 @@ Please consider citing our paper if you find this code useful, many thanks!
 }
 ```
 
-# Acknowledge
+## Acknowledge
 
 This repository adapts and integrate scripts from the original repo provided for the DCASE Task 3 Challenge baseline (audio-only) and other repos. In particular:
 
