@@ -77,7 +77,7 @@ To start the frame extraction and AVCS transformation run:
 
 NOTE: this operation will take a few hours to complete and requires ~75 GB of free space. After extracting the frames in folder "3", the bash script applies the 7 transformations, one at a time. 
 
-Optionally, the process can be sped up by parallelizing the transformations. I.e., instead of running the bash script, extract the frames with `python core/extract_frames_and_AVCS.py --ACS-case 3`. Once it finishes, perform the 7 tranformations in parallel with `python core/video_channel_swap.py --ACS-case <case_number>` and replace <case_number> with 1, 2, 4, 5, 6, 7, and 8 in seven parallel jobs. 
+Optionally, the process can be sped up by parallelizing the transformations. I.e., instead of running the bash script, extract the frames with `python core/extract_frames_and_AVCS.py --ACS-case 3`. Once it finishes, perform the 7 transformations in parallel with `python core/video_channel_swap.py --ACS-case <case_number>` and replace <case_number> with 1, 2, 4, 5, 6, 7, and 8 in seven parallel jobs. 
 
 
 ## 1 - EXTRACT INPUT FEATURES 
@@ -97,7 +97,7 @@ This will create a `train_dataset.h5`, `test_dataset.h5`, and `feature_scaler.h5
 
 ## 2 - TRAINING
 
-You can customize you training by setting the input string argument "INFO" in `scripts/2_train.sh`. You can also set the number of epochs ("EPOCHS") and learning rate ("LR"). Note, the input arguments that you parse from the bash script will override the configuration settings in `core/config.py`.
+You can customize your training by setting the input string argument "INFO" in `scripts/2_train.sh`. You can also set the number of epochs ("EPOCHS") and learning rate ("LR"). Even though we trained all our models for 50 epochs, they usually converge within the first 10 epochs. Therefore, we recommend setting the number of epochs to 10. Note, the input arguments that you parse from the bash script will override the configuration settings in `core/config.py`.
 Start the training by running:
 
 	bash scripts/2_train.sh
@@ -138,8 +138,8 @@ Please consider citing our paper if you find this code useful, many thanks!
 
 ## Acknowledge
 
-This repository adapts and integrate scripts from the original repo provided for the DCASE Task 3 Challenge baseline (audio-only) and other repos. In particular:
+This repository adapts and integrates scripts from the original repo provided for the DCASE Task 3 Challenge baseline (audio-only) and other repos. In particular:
 
-* The prediction of multi-ACCDOA vectors, the ADPIT loss function, and the implementation of the SELD metrics can be found in: https://github.com/sharathadavanne/seld-dcase2023 
+* The prediction of multi-ACCDOA vectors, the ADPIT loss function, and the implementation of the SELD metrics can be found at: https://github.com/sharathadavanne/seld-dcase2023 
 * The extraction of intensity vectors for the FOA audio format is adapted from Yin Cao's https://github.com/yinkalario/EIN-SELD
 * The Pytorch implementation of I3D and the respective pre-trained models can be found in AJ Piergiovanni's https://github.com/piergiaj/pytorch-i3d/tree/master
