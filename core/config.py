@@ -22,8 +22,8 @@ input = {
 training_param = {
     'optimizer': torch.optim.Adam,
     #'criterion': nn.CrossEntropyLoss,
-    'learning_rate': 0.0001, # default if user does not provide a different lr to the parser
-    'epochs': 50, # default if user does not provide a different number to the parser
+    'learning_rate': 0.00005, # default if user does not provide a different lr to the parser
+    'epochs': 10, # default if user does not provide a different number to the parser
     'batch_size': 32, # default if user does not provide a different size to the parser
     'frame_len_samples': input['input_len_sec'] * input['fs'], # number of audio samples in input_len_sec,
     'num_video_frames': input['input_len_sec'] * input['fps'], # number of video frames in input_len_sec,
