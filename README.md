@@ -77,7 +77,7 @@ To start the frame extraction and AVCS transformation run:
 
 NOTE: this operation will take a few hours to complete and requires ~75 GB of free space. After extracting the frames in folder "3", the bash script applies the 7 transformations, one at a time. 
 
-Optionally, the process can be sped up by parallelizing the transformations. I.e., instead of running the bash script, extract the frames with `python core/extract_frames_and_AVCS.py --ACS-case 3`. Once it finishes, perform the 7 transformations in parallel with `python core/video_channel_swap.py --ACS-case <case_number>` and replace <case_number> with 1, 2, 4, 5, 6, 7, and 8 in seven parallel jobs. 
+Optionally, the process can be sped up by parallelizing the transformations. I.e., instead of running the bash script, extract the frames with `python core/extract_frames_and_AVCS.py --ACS-case 3`. **Once it finishes,** perform the 7 transformations in parallel with `python core/video_channel_swap.py --ACS-case <case_number>` and replace <case_number> with 1, 2, 4, 5, 6, 7, and 8 in seven parallel jobs. 
 
 
 ## 1 - EXTRACT INPUT FEATURES 
